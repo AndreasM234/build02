@@ -1,0 +1,11 @@
+" ============================================================================
+" Netrw Directory Listing                                        (netrw v173)
+"   /home/student/build02/src/main/java
+"   Sorted by time
+"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
+" ==============================================================================
+../
+java/
+| .HelloWorld.java.swp
+| HelloWorld.java
+| HelloWorldHelper.java/
