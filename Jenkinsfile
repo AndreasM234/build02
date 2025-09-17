@@ -30,6 +30,18 @@ sh 'cp /var/lib/jenkins/workspace/CICDPipeline/target/HelloWorld-0.0.1.jar /home
 }
 }
 }
+post {
+    success {
+      mail to: 'craig@creativeagilepartners.co.uk',
+           subject: "✅ SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+           body: "Build succeeded.\nSee: ${env.BUILD_URL}"
+    }
+    failure {
+      mail to: 'andreas.mengel@regnology.net',
+           subject: "❌ FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+           body: "Build failed.\nConsole: ${env.BUILD_URL}console"
+    }
+  }
 }
 
 
